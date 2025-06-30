@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./app/**/*.{ts,tsx}",
@@ -16,10 +18,11 @@ module.exports = {
       lg: "960px",
       xl: "1200px",
     },
-    fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
+    extend: {
+      fontFamily: {
+        primary: ["var(--font-jetbrainsMono)", ...fontFamily.mono],
+      },
     },
-    extend: {},
   },
   plugins: [],
 };
