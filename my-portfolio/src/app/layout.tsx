@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+//Components
+import Header from "@/components/Header";
+
 const JetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "600", "700", "800"],
@@ -21,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${JetBrainsMono.variable} antialiased`}>
+        <Header></Header>
         {children}
       </body>
     </html>
