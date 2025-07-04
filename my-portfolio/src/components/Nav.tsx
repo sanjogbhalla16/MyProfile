@@ -1,5 +1,41 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const links = [
+  {
+    name: "home",
+    path: "/",
+  },
+  {
+    name: "resume",
+    path: "/",
+  },
+  {
+    name: "work",
+    path: "/",
+  },
+  {
+    name: "contact",
+    path: "/",
+  },
+];
+
 const Nav = () => {
-  return <nav>desktop nav</nav>;
+  const pathname = usePathname();
+  console.log(pathname);
+
+  return (
+    <nav className="flex gap-8">
+      {links.map((link, index) => {
+        return (
+          <Link href={link.path} key={index} className="">
+            {link.name}
+          </Link>
+        );
+      })}
+    </nav>
+  );
 };
 
 export default Nav;

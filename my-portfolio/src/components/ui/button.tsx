@@ -23,7 +23,7 @@ const buttonVariants = cva(
 
         // ✅ New accent variant
         accent:
-          "border border-[--color-accent] text-[--color-accent] hover:bg-[--color-accent] hover:text-black",
+          "border border-[var(--color-accent)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white transition-colors",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
