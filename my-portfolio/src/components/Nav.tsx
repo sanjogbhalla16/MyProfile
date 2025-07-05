@@ -20,7 +20,7 @@ const links = [
     path: "/",
   },
 ];
-
+// hi
 const Nav = () => {
   const pathname = usePathname();
   console.log(pathname);
