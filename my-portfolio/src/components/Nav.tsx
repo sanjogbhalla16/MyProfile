@@ -1,7 +1,9 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+//we have just removed the service page
 const links = [
   {
     name: "home",
@@ -9,15 +11,15 @@ const links = [
   },
   {
     name: "resume",
-    path: "/",
+    path: "/resume",
   },
   {
     name: "work",
-    path: "/",
+    path: "/work",
   },
   {
     name: "contact",
-    path: "/",
+    path: "/contact",
   },
 ];
 
