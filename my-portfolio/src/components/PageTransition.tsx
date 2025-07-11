@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import { AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
-const PageTransition = () => {
-  return <div>PageTransition</div>;
+const PageTransition = ({ children }) => {
+  return <AnimatePresence>{children}</AnimatePresence>;
 };
 
 export default PageTransition;
