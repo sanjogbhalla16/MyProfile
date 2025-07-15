@@ -23,7 +23,6 @@ const StairTransition = () => {
           ></motion.div>
         </div>
       </AnimatePresence>
-      ;
     </>
   );
 };
