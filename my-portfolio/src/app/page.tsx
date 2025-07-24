@@ -44,7 +44,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Stats></Stats>
+      <div className="mt-12 flex justify-center">
+        <Stats></Stats>
+      </div>
     </section>
   );
 };
