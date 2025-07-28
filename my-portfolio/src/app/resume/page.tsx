@@ -86,19 +86,81 @@ const skills = {
       name: "html5",
     },
     {
-      icon: <FaHtml5></FaHtml5>,
-      name: "html5",
+      icon: <FaCss3></FaCss3>,
+      name: "Css",
     },
     {
-      icon: <FaHtml5></FaHtml5>,
-      name: "html5",
+      icon: <FaJs></FaJs>,
+      name: "Javascript",
     },
     {
-      icon: <FaHtml5></FaHtml5>,
-      name: "html5",
+      icon: <FaReact></FaReact>,
+      name: "React",
+    },
+    {
+      icon: <FaNodeJs></FaNodeJs>,
+      name: "NodeJs",
+    },
+    {
+      icon: <FaPython></FaPython>,
+      name: "Python",
+    },
+    {
+      icon: <FaGit></FaGit>,
+      name: "Github",
+    },
+    {
+      icon: <FaDocker></FaDocker>,
+      name: "Docker",
+    },
+    {
+      icon: "/assets/resume/icons-amazon-aws",
+      name: "AWS",
+    },
+    {
+      icon: "/assets/resume/icons-chatgpt",
+      name: "ChatGPT",
+    },
+    {
+      icon: "/assets/resume/icons-kubernetes",
+      name: "Kubernetes",
+    },
+    {
+      icon: "/assets/resume/icons-linux",
+      name: "Linux",
+    },
+    {
+      icon: "/assets/resume/icons-mongodb",
+      name: "Mongodb",
+    },
+    {
+      icon: "/assets/resume/icons-mysql",
+      name: "MySQL",
+    },
+    {
+      icon: "/assets/resume/icons-nextjs",
+      name: "NextJs",
+    },
+    {
+      icon: "/assets/resume/icons-postgresql",
+      name: "Postgresql",
+    },
+    {
+      icon: "/assets/resume/icons-postman",
+      name: "Postman",
+    },
+    {
+      icon: "/assets/resume/icons-prisma",
+      name: "Prisma",
+    },
+    {
+      icon: "/assets/resume/icons-typescript",
+      name: "Typescript",
     },
   ],
 };
+
+import { Tabs } from "@/components/ui/tabs";
 
 const Resume = () => {
   return <div>resume page</div>;
