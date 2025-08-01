@@ -13,7 +13,7 @@ import {
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
-//about data
+//about data will do it today
 const about = {
   title: "About me",
   description:
