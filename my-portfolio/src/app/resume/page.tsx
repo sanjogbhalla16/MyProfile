@@ -1,5 +1,5 @@
 "use client";
-//we will do this but today I need to complete the Gmail Automation
+
 import {
   FaHtml5,
   FaCss3,
