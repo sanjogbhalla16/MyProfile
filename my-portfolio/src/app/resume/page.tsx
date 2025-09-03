@@ -9,6 +9,7 @@ import {
   FaPython,
   FaGit,
   FaDocker,
+  FaDownload,
 } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
@@ -277,7 +278,18 @@ const Resume = () => {
             </TabsContent>
             {/* about me */}
             <TabsContent value="about" className="w-full">
-              About Me
+              <div className="flex flex-col gap-4 items-center">
+                <span>About Me</span>
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="bg-accent text-white px-4 py-2 rounded-full flex items-center gap-2 shadow hover:bg-accent/80 transition"
+                  title="Download Resume"
+                >
+                  <FaDownload size={20} />
+                  <span className="hidden sm:inline">Download</span>
+                </a>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
