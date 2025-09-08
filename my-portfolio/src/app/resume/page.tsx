@@ -115,47 +115,47 @@ const skills = {
       name: "Docker",
     },
     {
-      icon: "/assets/resume/icons-amazon-aws",
+      icon: "/assets/resume/icons-amazon-aws.png",
       name: "AWS",
     },
     {
-      icon: "/assets/resume/icons-chatgpt",
+      icon: "/assets/resume/icons-chatgpt.png",
       name: "ChatGPT",
     },
     {
-      icon: "/assets/resume/icons-kubernetes",
+      icon: "/assets/resume/icons-kubernetes.png",
       name: "Kubernetes",
     },
     {
-      icon: "/assets/resume/icons-linux",
+      icon: "/assets/resume/icons-linux.png",
       name: "Linux",
     },
     {
-      icon: "/assets/resume/icons-mongodb",
+      icon: "/assets/resume/icons-mongodb.png",
       name: "Mongodb",
     },
     {
-      icon: "/assets/resume/icons-mysql",
+      icon: "/assets/resume/icons-mysql.png",
       name: "MySQL",
     },
     {
-      icon: "/assets/resume/icons-nextjs",
+      icon: "/assets/resume/icons-nextjs.png",
       name: "NextJs",
     },
     {
-      icon: "/assets/resume/icons-postgresql",
+      icon: "/assets/resume/icons-postgresql.png",
       name: "Postgresql",
     },
     {
-      icon: "/assets/resume/icons-postman",
+      icon: "/assets/resume/icons-postman.png",
       name: "Postman",
     },
     {
-      icon: "/assets/resume/icons-prisma",
+      icon: "/assets/resume/icons-prisma.png",
       name: "Prisma",
     },
     {
-      icon: "/assets/resume/icons-typescript",
+      icon: "/assets/resume/icons-typescript.png",
       name: "Typescript",
     },
   ],
@@ -269,28 +269,34 @@ const Resume = () => {
                     {skills.description}
                   </p>
                 </div>
-                <ul>
-                  {skills.skillset.map((skill, index) => {
-                    return <li key={index}>{skill.name}</li>;
-                  })}
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+                  {skills.skillset.map((skill, index) => (
+                    <li key={index}>
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <span>
+                              {typeof skill.icon === "string" ? (
+                                <img
+                                  src={skill.icon}
+                                  alt={skill.name}
+                                  className="w-8 h-8"
+                                />
+                              ) : (
+                                skill.icon
+                              )}
+                            </span>
+                          </TooltipTrigger>
+                          <TooltipContent>{skill.name}</TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </TabsContent>
             {/* about me */}
-            <TabsContent value="about" className="w-full">
-              <div className="flex flex-col gap-4 items-center">
-                <span>About Me</span>
-                <a
-                  href="/resume.pdf"
-                  download
-                  className="bg-accent text-white px-4 py-2 rounded-full flex items-center gap-2 shadow hover:bg-accent/80 transition"
-                  title="Download Resume"
-                >
-                  <FaDownload size={20} />
-                  <span className="hidden sm:inline">Download</span>
-                </a>
-              </div>
-            </TabsContent>
+            <TabsContent value="about" className="w-full"></TabsContent>
           </div>
         </Tabs>
       </div>
