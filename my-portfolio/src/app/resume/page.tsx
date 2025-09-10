@@ -275,7 +275,7 @@ const Resume = () => {
                       <TooltipProvider>
                         <Tooltip>
                           <TooltipTrigger asChild>
-                            <span>
+                            <span className="text-6xl group-hover:text-accent flex justify-center transition-all duration-300">
                               {typeof skill.icon === "string" ? (
                                 <img
                                   src={skill.icon}
