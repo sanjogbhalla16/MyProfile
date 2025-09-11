@@ -170,6 +170,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
+//we need to complete this scroll area
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
